@@ -17,7 +17,7 @@
 - [x] **Task 1.4:** Buat Endpoint `POST /ingest` & Pencarian Baseline Vector RAG
 
 ### Fase 2: Hybrid Search & Reranking
-- [ ] **Task 2.1:** Implementasi Pencarian Leksikal (PostgreSQL Full-Text Search)
+- [x] **Task 2.1:** Implementasi Pencarian Leksikal (PostgreSQL Full-Text Search)
 - [ ] **Task 2.2:** Implementasi Algoritma Reciprocal Rank Fusion (RRF) & Cross-Encoder Reranker
 
 ### Fase 3: Knowledge Graph Layer (Inti GraphRAG)
