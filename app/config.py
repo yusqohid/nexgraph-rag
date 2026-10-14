@@ -12,7 +12,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     REDIS_URL: str = "redis://localhost:6379/0"
     LLM_API_KEY: SecretStr = SecretStr("")
-    EMBEDDING_MODEL: str = "text-embedding-3-small"
+    LLM_MODEL: str = "gemini-2.5-flash"
+    EMBEDDING_MODEL: str = "gemini-embedding-001"
     EMBEDDING_DIM: int = Field(default=1536, ge=1536, le=1536)
 
 
