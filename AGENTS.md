@@ -80,11 +80,17 @@ Saat menulis atau menjalankan unit test di direktori `tests/`:
 ---
 
 ## 5. Protokol Kerja Agent (Workflow Loop)
-Untuk setiap task di `TASKS.md`, ikuti siklus 4 langkah ini secara disiplin:
-1. **Plan:** Baca spesifikasi task di `TASKS.md` dan cek file terkait yang sudah ada di repositori.
-2. **Implement:** Buat atau perbarui file sesuai daftar *Target File* pada task tersebut. Jaga agar kode tetap modular, bersih, dan tidak memuat *dead code*.
-3. **Verify:** Jalankan *Verification Command (DoD)* yang tertulis di `TASKS.md`. Jika terjadi error atau *test failure*, baca *traceback*-nya, perbaiki akar masalahnya, dan jalankan ulang verifikasi.
-4. **Update State:** Setelah verifikasi lulus tanpa error, ubah status task terkait di `TASKS.md` dari `- [ ]` menjadi `- [x]`, lalu berhenti dan laporkan ringkasan perubahan kepada pengguna.
+Untuk setiap task di `TASKS.md`, ikuti siklus 5 langkah ini secara disiplin:
+1. **Branch:** Buat branch fitur terpisah dari `main` terbaru (`git checkout -b feat/task-X-Y-<slug>`) sebelum menulis kode apa pun. *Satu task = satu branch = satu Pull Request.* **DILARANG** commit langsung ke `main`.
+2. **Plan:** Baca spesifikasi task di `TASKS.md` dan cek file terkait yang sudah ada di repositori.
+3. **Implement:** Buat atau perbarui file sesuai daftar *Target File* pada task tersebut. Jaga agar kode tetap modular, bersih, dan tidak memuat *dead code*.
+4. **Verify:** Jalankan *Verification Command (DoD)* yang tertulis di `TASKS.md`. Jika terjadi error atau *test failure*, baca *traceback*-nya, perbaiki akar masalahnya, dan jalankan ulang verifikasi.
+5. **Pull Request:** Setelah verifikasi lulus tanpa error, ubah status task terkait di `TASKS.md` dari `- [ ]` menjadi `- [x]`, push branch (`git push -u origin <branch>`), lalu buka Pull Request ke `main` dengan ringkasan perubahan + bukti DoD. Berhenti dan tunggu review/merge pemilik repo sebelum mengerjakan task berikutnya.
+
+### Konvensi Branch & PR
+* Format branch: `feat/task-<fase>.<nomor>-<slug-singkat>` (contoh: `feat/task-1-3-chunker-embedder`).
+* Judul PR: `[Task X.Y] <Judul task sesuai TASKS.md>`.
+* Deskripsi PR wajib memuat: daftar file yang diubah, *Verification Command (DoD)* yang dijalankan beserta hasilnya, dan catatan review yang relevan bagi pemilik repo.
 
 ---
 
