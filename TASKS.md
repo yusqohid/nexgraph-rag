@@ -14,7 +14,7 @@
 - [x] **Task 1.1:** Inisialisasi Proyek Python (`uv`) & Docker Compose (`pgvector` + Redis)
 - [x] **Task 1.2:** Setup Koneksi Async Database & Migrasi Skema DDL (Tabel + Indeks)
 - [x] **Task 1.3:** Implementasi Hierarchical Text Chunker & Wrapper Embedding API
-- [ ] **Task 1.4:** Buat Endpoint `POST /ingest` & Pencarian Baseline Vector RAG
+- [x] **Task 1.4:** Buat Endpoint `POST /ingest` & Pencarian Baseline Vector RAG
 
 ### Fase 2: Hybrid Search & Reranking
 - [ ] **Task 2.1:** Implementasi Pencarian Leksikal (PostgreSQL Full-Text Search)
